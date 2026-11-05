@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e6e6e6;
+    margin: 0;
+}
+
+.calculadora {
+    background-color: #f3f3f3;
+    width: 320px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+    border: 1px solid #dcdcdc;
+}
+
+.pantalla {
+    background-color: #f3f3f3;
+    color: #111;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: right;
+    padding: 30px 20px 10px 20px;
+    min-height: 100px;
+    word-break: break-all; /*fuerza la ruptura del número si no cabe */
+    display: flex;
+    flex-direction: column; /* mantiene el texto en bloque respetando el ancho */
+    justify-content: flex-end; /*lo pega a la parte inferior */
+}
+
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    background-color: #ccc; /*funciona como borde entre botones */
+    padding: 2px;
+}
+
+.btn {
+    border: none;
+    background-color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+
+.btn:hover {
+    background-color: #e5e5e5;
+}
+
+/* diferenciación visual de botones inspirada en Windows */
+.btn.fn, .btn.op {
+    background-color: #f9f9f9;
+}
+
+.btn.fn:hover, .btn.op:hover {
+    background-color: #eaeaea;
+}
+
+.btn.igual {
+    grid-column: span 4;
+    background-color: #0067c0; /* Azul como el de Windows */
+    color: white;
+}
+
+.btn.igual:hover {
+    background-color: #005a9e;
+}
+.footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #666;
+    font-size: 0.85rem;
+    font-weight: 500;
+}

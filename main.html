@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculadora">
+        <!-- pantalla -->
+        <div class="pantalla" id="pantalla">0</div>
+        
+        <!-- teclado -->
+        <div class="teclado" id="teclado">
+            <!-- fila 1: Operaciones extra -->
+            <button class="btn fn" data-action="clear">C</button>
+            <button class="btn fn" data-action="square">x²</button>
+            <button class="btn fn" data-action="sqrt">√</button>
+            <button class="btn fn" data-action="delete">DEL</button>
+            
+            <!-- fila 2 -->
+            <button class="btn num" data-number="7">7</button>
+            <button class="btn num" data-number="8">8</button>
+            <button class="btn num" data-number="9">9</button>
+            <button class="btn op" data-action="divide">/</button>
+            
+            <!-- fila 3 -->
+            <button class="btn num" data-number="4">4</button>
+            <button class="btn num" data-number="5">5</button>
+            <button class="btn num" data-number="6">6</button>
+            <button class="btn op" data-action="multiply">X</button>
+            
+            <!-- fila 4 -->
+            <button class="btn num" data-number="1">1</button>
+            <button class="btn num" data-number="2">2</button>
+            <button class="btn num" data-number="3">3</button>
+            <button class="btn op" data-action="subtract">-</button>
+            
+            <!-- fila 5 -->
+            <button class="btn fn" data-action="sign">+/-</button>
+            <button class="btn num" data-number="0">0</button>
+            <button class="btn fn" data-action="decimal">.</button>
+            <button class="btn op" data-action="add">+</button>
+            
+            <!-- fila 6: Igual ocupa todo el ancho -->
+            <button class="btn igual" data-action="equals">=</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    
+    <footer class="footer">
+    &copy; 2026 Alejandro Martinez. Creado por y para DAM.
+    </footer>
+</body>
+</html>
